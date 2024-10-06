@@ -104,6 +104,26 @@ public class JavaBasics {
         //     System.out.println();
         //  }
 
+
+        /*
+         Floyd's triangle
+
+         1
+         2 3
+         4 5 6
+         7 8 9 10
+         11 12 13 14 15
+         */
+
+        //  int num = 1;
+        //  for(int i=1;i<=5;i++){
+        //     for(int j=1;j<=i;j++){
+        //         System.out.print(num + " ");
+        //         num++;
+        //     }
+        //     System.out.println();
+        //  }
+
         /*
          
         1
@@ -122,6 +142,24 @@ public class JavaBasics {
         //             System.out.print("0");
         //         }
                 
+        //     }
+        //     System.out.println();
+        //  }
+
+
+        /*
+        Character pattern
+        A
+        BC
+        DEF
+        GHIJ
+         */
+
+        //  char ch = 'A';
+        //  for(int i=1;i<=4;i++){
+        //     for(int j=1;j<=i;j++){
+        //         System.out.print(ch);
+        //         ch++;
         //     }
         //     System.out.println();
         //  }
