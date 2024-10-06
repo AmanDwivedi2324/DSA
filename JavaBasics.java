@@ -3,7 +3,7 @@ public class JavaBasics {
     public static void main(String[] args) {
 
         /* 
-        Inverted star pattern 
+        1) Inverted star pattern 
 
             * * * * 
             * * * 
@@ -20,6 +20,8 @@ public class JavaBasics {
 
 
         /*
+
+        2) 
          *
          **
          ***
@@ -36,6 +38,8 @@ public class JavaBasics {
         //  }
 
         /*
+
+        3) 
          *****
          *   *
          *   * 
@@ -55,6 +59,7 @@ public class JavaBasics {
         // }
 
         /*
+        4)
            *
           **
          ***   
@@ -73,6 +78,7 @@ public class JavaBasics {
         // }
 
         /*
+        5)
          12345
          1234
          123
@@ -88,7 +94,7 @@ public class JavaBasics {
         //  }
 
         /*
-        Half pyramid pattern
+        6) Half pyramid pattern
         1
         12
         123
@@ -106,7 +112,7 @@ public class JavaBasics {
 
 
         /*
-         Floyd's triangle
+         7) Floyd's triangle
 
          1
          2 3
@@ -125,7 +131,7 @@ public class JavaBasics {
         //  }
 
         /*
-         
+        8)
         1
         01
         101
@@ -148,7 +154,7 @@ public class JavaBasics {
 
 
         /*
-        Character pattern
+        9) Character pattern
         A
         BC
         DEF
@@ -163,6 +169,153 @@ public class JavaBasics {
         //     }
         //     System.out.println();
         //  }
+
+
+        /*
+        10)  Solid rhombus pattern
+
+             *****
+            *****
+           *****
+          *****
+         *****
+
+         */
+
+        //  for(int i=1;i<=5;i++){
+        //     for(int j=1;j<=5-i;j++){
+        //         System.out.print(" ");
+        //     }
+        //     for(int k=1;k<=5;k++){
+        //         System.out.print("*");
+        //     }
+        //     System.out.println();
+        //  }
+
+        /*
+        11)  Hollow Rhombus pattern 
+
+             *****
+            *   *
+           *   * 
+          *   *
+         *****
+         */
+
+        //  for (int i = 1; i <= 5; i++) {
+        //     for(int j=1;j<=5-i;j++){
+        //         System.out.print(" ");
+        //     }
+        //     for(int k=1;k<=5;k++){
+        //         if(i==1 || i==5 || k==1 || k==5){
+        //             System.out.print("*");
+        //         }
+        //         else{
+        //             System.out.print(" ");
+        //         }
+                
+        //     }
+        //     System.out.println();
+        //  }
+
+
+        /*
+        12)  Number Pyramid Pattern
+
+                1
+               2 2
+              3 3 3
+             4 4 4 4
+            5 5 5 5 5    
+         */
+
+        // for(int i=1;i<=5;i++){
+        //     for(int j=1;j<=5-i;j++){
+        //         System.out.print(" ");
+        //     }
+        //     for(int k=1;k<=i;k++){
+        //         System.out.print(i + " ");
+        //     }
+        //     System.out.println();
+        // }
+
+        /*
+
+        13) Palindromic pattern
+         
+              1
+            2 1 2
+          3 2 1 2 3 
+        4 3 2 1 2 3 4
+      5 4 3 2 1 2 3 4 5   
+
+         */
+
+        //  for(int i=1;i<=5;i++){
+        //     for(int j=1;j<=5-i;j++){
+        //         System.out.print("  ");
+        //     }
+        //     for(int k=i;k>=1;k--){
+        //         System.out.print(k + " ");
+        //     }
+        //     for(int l=1;l<=i-1;l++){
+        //         System.out.print((l+1) + " ");
+        //     }
+        //     System.out.println();
+        //  }
+
+
+        /*
+         
+        Diamond Pattern 
+
+                *
+               ***
+              *****
+             *******
+             *******
+              *****
+               ***
+                *
+                
+         */
+
+        //  for(int i=1;i<=4;i++){
+        //     for(int j=1;j<=4-i;j++){
+        //         System.out.print(" ");
+        //     }
+        //     for(int k=1;k<=2*i-1;k++){
+        //         System.out.print("*");
+        //     }
+        //     System.out.println();
+        //   }
+
+        //   for(int i=4;i>=1;i--){
+        //     for(int j=1;j<=4-i;j++){
+        //         System.out.print(" ");
+        //     }
+        //     for(int k=1;k<=2*i-1;k++){
+        //         System.out.print("*");
+        //     }
+        //     System.out.println();
+        //   }
+
+
+        /*
+         
+        Butterfly pattern
+
+        *      *
+        **    **
+        ***  ***
+        ********
+        ********
+        ***  ***
+        **    **
+        *      *
+
+         */
+
 
     }
 }
