@@ -267,7 +267,7 @@ public class JavaBasics {
 
         /*
          
-        Diamond Pattern 
+       14)  Diamond Pattern 
 
                 *
                ***
