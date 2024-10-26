@@ -177,9 +177,115 @@ public static void buyAndSellStocks(int[] arr){
     System.out.println("Maximum profit is : " + profit);
     
 }
+
+public static boolean duplicateInArray(int[] arr){
+    Arrays.sort(arr);
+    int n = arr.length;
+
+    for(int i=1;i<n;i++){
+        if(arr[i] == arr[i-1]){
+            return true;
+        }
+    }
+    return false;
+}
+
+
+public static boolean duplicateInArrayUsingSet(int[] arr){
+    HashSet<Integer> hs = new HashSet<>();
+    for(int i=0;i<arr.length;i++){
+        if(hs.contains(arr[i])){
+            return true;
+        }else{
+            hs.add(arr[i]);
+        }
+    }
+    return false;
+}
+
+public static int indexOfTarget(int[] arr, int target){
+    
+    for(int i=0;i<arr.length;i++){
+        if(arr[i] == target){
+            return i;
+        }
+    }
+    return -1;
+}
+
+public static void maxProfit(int[] arr){
+    int n = arr.length;
+    int[] temp = new int[n];
+    temp[0] = arr[0];
+    for(int i=1;i<n;i++){
+      temp[i] = arr[i]<temp[i-1]?arr[i]:temp[i-1];
+}
+    int maxProfit = 0;
+    for(int i=0;i<n;i++){
+        int tempProfit = arr[i] - temp[i];
+        if(tempProfit > maxProfit){
+            maxProfit = tempProfit;
+        } 
+    }
+    System.out.println("Max profit is : " + maxProfit);
+    // outputArray(temp);
+
+}
+
+public static char[] mid(String str){
+    int n = str.length();
+   
+    if(n%2==0){
+        char temp[] = new char[2];
+        temp[0] = str.charAt(n/2 -1);
+        temp[1] = str.charAt(n/2);
+        return temp;
+    }else{
+        char[] temp1 = new char[1];
+        temp1[0] = str.charAt(n/2);
+        return temp1;
+    }
+}
+
+public static void bubbleSort(int[] arr){
+    for(int i=0;i<arr.length-1;i++){
+        for(int j=0;j<arr.length-1-i;j++){
+            if(arr[j]>arr[j+1]){
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+    outputArray(arr);
+}
+
+public static void selectionSort(int[] arr){
+   for(int i=0;i<arr.length;i++){
+    int minPos = i;
+    for(int j=i+1;j<arr.length;j++){
+        if(arr[minPos] > arr[j]){
+            minPos = j;
+        }
+    }
+    //swap
+
+    int temp = arr[minPos];
+    arr[minPos] = arr[i];
+    arr[i] = temp;
+   }
+   outputArray(arr);
+}
+
+
+
 public static void main(String[] args) { 
     
-    int arr[] = {7,1,5,3,6,4};
+    int arr[] = {7,6,4,3,1,45,748,65};
+
+    // int arr1[] = {1,2,3,1};
+    // int arr2[] = {1,2,3,4};
+    // int arr3[] = {1,1,1,3,3,4,3,2,4,2};
 
     // takeInput(arr);
     // int key = 8;
@@ -201,7 +307,20 @@ public static void main(String[] args) {
     // maxSubArraySum(arr);
     // prefixSum(arr);
     // KadanesTheorem(arr);
-    buyAndSellStocks(arr);
+    // buyAndSellStocks(arr);
+    // System.out.println(duplicateInArrayUsingSet(arr1));
+    // System.out.println(duplicateInArrayUsingSet(arr2));
+    // System.out.println(duplicateInArrayUsingSet(arr3));
+    // System.out.println(indexOfTarget(arr,0));
+    // System.out.println(indexOfTarget(arr,3));
+    // maxProfit(arr);
     
+    // System.out.println(mid("Abhishek"));
+    // System.out.println(mid("Yogesh"));
+    // System.out.println(mid("Devendraa"));
+    // System.out.println(mid("Yogesh"));
+    // bubbleSort(arr);  
+    selectionSort(arr);  
+ 
 }
 }
